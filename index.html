@@ -3,43 +3,72 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | Technical Writing Portfolio</title>
-  <link rel="stylesheet" href="assets/style.css">
+  <title>My Technical Writing Portfolio</title>
+
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+
   <!-- Navbar -->
   <nav class="navbar">
-    <a href="index.html">Home</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="skills.html">Skills</a>
-    <a href="contact.html">Contact</a>
+    <a href="#">Home</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+    <button id="darkToggle">🌙</button>
   </nav>
 
-  <!-- Hero -->
+  <!-- Hero Section -->
   <section class="hero">
     <h1>Hi, I’m [Your Name]</h1>
     <p>Technical Writer | Turning Complexity into Clarity</p>
-    <a href="assets/resume.pdf" class="btn">📄 Download Resume</a>
+    <a href="resume.pdf" class="btn">📄 Download Resume</a>
   </section>
 
-  <!-- Featured Work -->
-  <section class="portfolio-preview">
+  <!-- Portfolio Section -->
+  <section id="portfolio">
     <h2>Featured Work</h2>
     <div class="card">
       <h3>API Documentation</h3>
       <p>Clear API docs with examples, error handling, and best practices.</p>
-      <a href="docs/api-sample.pdf" target="_blank">View PDF</a>
+      <a href="api-doc.pdf">View PDF</a>
     </div>
     <div class="card">
       <h3>User Guide</h3>
       <p>Step-by-step installation guide for a semiconductor tool.</p>
-      <a href="docs/user-guide.pdf" target="_blank">View PDF</a>
+      <a href="user-guide.pdf">View PDF</a>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 [Your Name] | <a href="mailto:you@example.com">Contact</a></p>
-  </footer>
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>✍️ Oxygen XML</li>
+      <li>📝 MadCap Flare</li>
+      <li>⚙️ Git & Markdown</li>
+      <li>📘 Google Style Guide</li>
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p><i class="fas fa-envelope"></i> <a href="mailto:you@example.com">you@example.com</a></p>
+    <p><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/yourprofile">LinkedIn</a></p>
+    <p><i class="fab fa-github"></i> <a href="https://github.com/yourusername">GitHub</a></p>
+  </section>
+
+  <!-- Dark Mode Script -->
+  <script>
+    document.getElementById("darkToggle").onclick = function() {
+      document.body.classList.toggle("dark");
+    }
+  </script>
+
 </body>
 </html>
