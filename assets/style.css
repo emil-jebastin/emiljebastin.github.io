@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 /* Reset */
 body {
   margin: 0;
@@ -29,30 +33,27 @@ body {
 /* Hero Section */
 .hero {
   text-align: center;
-  padding: 100px 20px;
+  padding: 120px 20px;
   background: linear-gradient(135deg, #0d6efd, #6610f2);
   color: white;
+  position: relative;
 }
 
 .hero h1 {
-  font-size: 3em;
-  margin-bottom: 10px;
+  font-size: 3.5em;
+  font-weight: 700;
+  margin-bottom: 15px;
+  animation: fadeInUp 1s ease-in-out;
 }
 
-.hero .btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 25px;
-  font-size: 1.1em;
-  background: white;
-  color: #0d6efd;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: 0.3s;
+.hero p {
+  font-size: 1.3em;
+  opacity: 0.9;
 }
 
-.hero .btn:hover {
-  background: #e2e6ea;
+@keyframes fadeInUp {
+  0% { transform: translateY(30px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
 }
 
 /* Portfolio Cards */
@@ -62,41 +63,44 @@ body {
 }
 
 .card {
-  margin: 20px auto;
-  max-width: 500px;
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  margin: 30px auto;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 30px;
+  color: #333;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  transform: translateY(-12px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.2);
 }
+
 
 /* Skills Section */
-#skills {
-  padding: 60px 20px;
-  text-align: center;
-}
-
 .skills-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  list-style: none;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 25px;
   padding: 0;
 }
 
 .skills-list li {
-  background: #f8f9fa;
-  padding: 15px;
-  border-radius: 8px;
-  text-align: center;
-  font-weight: bold;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  font-weight: 600;
+  transition: transform 0.3s;
 }
+
+.skills-list li:hover {
+  transform: scale(1.05);
+}
+
 
 /* Contact Section */
 #contact {
@@ -117,4 +121,12 @@ body.dark .navbar {
 body.dark .card {
   background: #1e1e1e;
   color: white;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #0d6efd;
+  color: white;
+  margin-top: 50px;
 }
